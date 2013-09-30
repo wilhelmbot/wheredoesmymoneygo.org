@@ -3,7 +3,7 @@ layout: default
 title: Country and Regional Analysis
 ---
 
-<script src="{{site.openspendingjs}}/app/bubblemap/bubblemap.js"></script>
+<script src="/js/bubblemap.js"></script>
 <script src="/img/functions/cofog.js"></script>
 
 <script type="text/javascript">
@@ -14,10 +14,9 @@ title: Country and Regional Analysis
        new OpenSpending.BubbleMap({
           openspendingjs: '{{site.openspendingjs}}',
           query: {
-            dataset: 'ukgov-finances-cra',
-            cuts: ['year:2010'],
-            drilldowns: ['cofog1', 'cofog2', 'cofog3'],
-            breakdown: 'region',
+            dataset: 'segob_fonden',
+            drilldowns: ['type'],
+            breakdown: 'state',
             rootNodeLabel: 'Total'
           },
           bubbleStyles: {
@@ -26,10 +25,10 @@ title: Country and Regional Analysis
 							'cofog-3':  BubbleTreeStyles.Cofog3
 				  },
           map: {
-            url: '/img/gbr.svg',
-            layerName: 'GBR',
-            keyAttribute: 'region',
-            legendText: 'Expenditure on'
+            url: '/img/mexico.svg',
+            layerName: 'states',
+            keyAttribute: 'name',
+            legendText: 'Costo de insumos en'
           },
           table: { show: false }
         });
