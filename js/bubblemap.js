@@ -76,6 +76,7 @@ OpenSpending.BubbleMap = function (config) {
 
         title = selectedRegion ? title + ' in ' + selectedRegion : title;
         $lg.append('<div class="title">' + opts.map.legendText + ' ' + title + '</div>');
+        /*
         $.each(colors, function(i,col) {
             if (isNaN(limits[i])) limits[i] = 0;
             if (isNaN(limits[i+1])) return;
@@ -86,6 +87,7 @@ OpenSpending.BubbleMap = function (config) {
             row.append('<div class="lbl">'+lbl+'</div>');
             $lg.append(row);
         });
+        */
         $('#wdmmg-map-legend').show();
     }
 
