@@ -1,6 +1,6 @@
 var OpenSpending = OpenSpending || {};
 
-OpenSpending.getBubbleMapDependencies = function(os_path) {
+OpenSpending.getBubbleMapDependencies = function(os_path, baseurl) {
     return [
         os_path + '/lib/vendor/base64.js',
         os_path + '/lib/boot.js',
@@ -20,7 +20,7 @@ OpenSpending.getBubbleMapDependencies = function(os_path) {
         os_path + '/lib/vendor/datatables/dataTables.bootstrap.js',
         os_path + '/app/data_table/openspending.data_table.js',
         os_path + '/app/bubblemap/map.css',
-        '/js/bubblemap.js'
+        baseurl + '/js/bubblemap.js'
         ];
 };
 
@@ -48,6 +48,7 @@ OpenSpending.BubbleMap = function (config) {
             cofog1:  BubbleTree.Styles.Cofog1,
             sector: BubbleTree.Styles.Sector
         },
+        bubblesPath: '/img/functions',
         map: {
             url: null,
             layerName: null,
@@ -193,7 +194,7 @@ OpenSpending.BubbleMap = function (config) {
                     cutLabelsAt: 20,
                     nodeClickCallback: onNodeClick,
                     firstNodeCallback: onNodeClick,
-                    rootPath: '/img/categories/',
+                    rootPath: opts.bubblesPath,
                     tooltip: {
                         qtip: true,
                         delay: 800,

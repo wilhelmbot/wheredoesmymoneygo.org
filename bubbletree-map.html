@@ -3,13 +3,13 @@ layout: default
 title: Country and Regional Analysis
 ---
 
-<script src="/js/bubblemap.js"></script>
-<script src="/img/categories/types.js"></script>
+<script src="{{site.baseurl}}/js/bubblemap.js"></script>
+<script src="{{site.baseurl}}/img/categories/types.js"></script>
 
 <script type="text/javascript">
 (function ($) {
   yepnope([
-   { load: OpenSpending.getBubbleMapDependencies('{{site.openspendingjs}}'),
+    { load: OpenSpending.getBubbleMapDependencies('{{site.openspendingjs}}', '{{site.baseurl}}'),
      complete: function() {
        new OpenSpending.BubbleMap({
           openspendingjs: '{{site.openspendingjs}}',
@@ -22,8 +22,9 @@ title: Country and Regional Analysis
           bubbleStyles: {
 							'type':  BubbleTreeStyles.FondenType
 				  },
+          bubblesPath: '{{site.baseurl}}/img/categories/',
           map: {
-            url: '/img/mexico.svg',
+            url: '{{site.baseurl}}/img/mexico.svg',
             layerName: 'states',
             keyAttribute: 'name',
             legendText: 'Costo de insumos en'
@@ -37,7 +38,7 @@ title: Country and Regional Analysis
 </script>
 
 <div id="wdmmg-bubblemap">
-  <div id="preloader" style="text-align: center; padding: 100px"><img src="/img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;<span class="txt">loading javascript libraries</span></div>
+  <div id="preloader" style="text-align: center; padding: 100px"><img src="{{site.baseurl}}/img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;<span class="txt">loading javascript libraries</span></div>
 
   <div id="wdmmg-bt">
     <div class="bubbletree-wrapper">
