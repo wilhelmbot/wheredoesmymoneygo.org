@@ -48,7 +48,7 @@ OpenSpending.BubbleMap = function (config) {
             cofog1:  BubbleTree.Styles.Cofog1,
             sector: BubbleTree.Styles.Sector
         },
-        bubblesPath: '/img/functions',
+        bubblesPath: '/img/functions/',
         map: {
             url: null,
             layerName: null,
