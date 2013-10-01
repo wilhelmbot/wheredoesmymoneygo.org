@@ -193,7 +193,7 @@ OpenSpending.BubbleMap = function (config) {
                     cutLabelsAt: 20,
                     nodeClickCallback: onNodeClick,
                     firstNodeCallback: onNodeClick,
-                    rootPath: '/img/functions/',
+                    rootPath: '/img/categories/',
                     tooltip: {
                         qtip: true,
                         delay: 800,
