@@ -118,7 +118,7 @@ OpenSpending.BubbleMap = function (config) {
         // apply colors to map
         self.layer.style('fill', function(data) {
           d = node.breakdownsByName[data[opts.map.keyAttribute]];
-          if (d === undefined || isNaN(d.amount)) return '#ccc';
+          if (d === undefined || isNaN(d.amount) || d.amount === 0) return '#ccc';
           return colsc.getColor(d.amount);
         });
 
