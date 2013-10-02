@@ -4,4 +4,5 @@ auto: true
 title: Where Does My Money Go?
 openspendingjs: 'http://openspending.org/static/openspendingjs'
 baseurl: '/wheredoesmymoneygo.org'
+timecut: 'time.year:2013|time.month:10|time.day:01'
 
