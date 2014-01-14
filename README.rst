@@ -3,6 +3,8 @@
 
 Fork de `Where Does My Money Go?`_ para visualizar `datos del FONDEN`_ para atención a emergencias de desastres naturales. Visualización integrada en http://www.presidencia.gob.mx/fonden.
 
+.. image:: https://raw.github.com/rodowi/wheredoesmymoneygo.org/gh-pages/img/screenshot.png
+
 ¿Qué es el FONDEN?
 ------------------
 
